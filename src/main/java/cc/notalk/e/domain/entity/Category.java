@@ -11,6 +11,11 @@ import javax.persistence.Table;
 @Table(name = "category")
 public class Category implements Serializable {
 
+    @Override
+    public String toString() {
+        return "Category [id=" + id + ", name=" + name + ", pid=" + pid + ", code=" + code + "]";
+    }
+
     private static final long serialVersionUID = -7724659769589654252L;
     @Id
     @Column(name = "id", nullable = false, unique = true)
